@@ -10,6 +10,7 @@ import Profile from "./Component/profile/profile";
 import Address from "./Component/profile/Address";
 import Main from "./Component/ProductShowcase/ProductMain";
 import ProductCatlog from "./Component/ProductShowcase/ProductCatlog";
+import ProductState from "./Context/ProductContext/ProductState";
 
 function App() {
 	return (
@@ -19,10 +20,19 @@ function App() {
 				<Menu />
 
 				<Switch>
-					<Route path='/' component={Home} exact />
+					<Route path='/' exact>
+						<Home />
+					</Route>
 					<Route path='/home' component={Home} />
-					<Route path='/product' component={ProductCatlog} exact />
-					<Route path='/item' component={Main} exact />
+					<Route path='/product' exact>
+						<ProductCatlog />
+					</Route>
+					<Route path='/item' exact>
+						<ProductState>
+							<Main />
+						</ProductState>
+					</Route>
+
 					<Route path='/cart' component={Cart} />
 					<Route path='/login' component={LoginDash} />
 					<Route path='/order' component={Order} />

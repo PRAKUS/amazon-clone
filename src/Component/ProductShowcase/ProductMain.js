@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
+import { useLocation } from "react-router";
 import Menu2 from "../Menu/Menu2";
 import ProductView from "./component/ProductView";
 import ProductDescription from "./component/ProductDescription";
@@ -7,7 +8,21 @@ import ProductSlider from "../Home/component/ProductSlider";
 import Template from "../Global/Template";
 import QAContainer from "../ProductShowcase/component/QAContainer";
 
+import ProductContext from "../../Context/ProductContext/product-context";
+import axios from "axios";
 function ProductMain() {
+	const { product, addProduct } = useContext(ProductContext);
+	const location = useLocation();
+	let link = location.state.link + location.search;
+	useEffect(() => {
+		fetchData();
+		window.scrollTo(0, 0);
+	}, []); //link dependencency is for page refresh.
+	async function fetchData() {
+		const res = await axios.get(link);
+		console.log("res", res);
+		addProduct(res.data[0]);
+	}
 	return (
 		<div>
 			<Menu2 />
@@ -22,10 +37,11 @@ function ProductMain() {
 				</div>
 				<Template lg={false}>
 					<Template.Left>
-						<ProductView />
+						<ProductView img={product.product[0]} />
 					</Template.Left>
 					<Template.Center>
-						<ProductDescription />
+						{console.log(product)}
+						<ProductDescription data={product.product[0]} />
 					</Template.Center>
 					<Template.Right>
 						<AddCart />

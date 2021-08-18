@@ -1,16 +1,16 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "../css/productview.css";
-let img = [
-	"image/product/img1.jpg",
-	"image/product/img7.jpg",
-	"image/product/img3.jpg",
-	"image/product/img4.jpg",
-	"image/product/img5.jpg",
-	"image/product/img6.jpg",
-];
-function ProductView() {
-	const select = useRef(null);
+
+function ProductView(props) {
+	let [img, setImage] = useState(["images/mb1.jpg"]);
 	const [data, setData] = useState(0);
+	const select = useRef(null);
+
+	useEffect(() => {
+		try {
+			setImage(props.img.images);
+		} catch {}
+	}, [props]);
 
 	const selector = (id) => {
 		let element = select.current;
@@ -34,7 +34,6 @@ function ProductView() {
 			</li>
 		);
 	});
-
 	return (
 		<div className='pro-container'>
 			<div className='pro-smimg'>
