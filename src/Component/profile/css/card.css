@@ -1,0 +1,70 @@
+.pdcard_container {
+	display: flex;
+	flex-direction: row;
+	border: var(--primary-border);
+	border-radius: 0.2em;
+	padding: 1em;
+	justify-content: space-evenly;
+	width: 20em;
+	height: 4.5em;
+	margin: 0.3em;
+}
+.pdcard_container:hover {
+	background-color: rgba(214, 214, 214, 0.3);
+}
+
+.pdcard_icon {
+	height: 2.5em;
+	width: 3.5em;
+	padding-top: 0.5em;
+	filter: drop-shadow(-1px 5px 5px rgba(0, 0, 0, 0.3));
+}
+.pdcard_tag {
+	display: flex;
+	flex-direction: column;
+	color: black;
+}
+.profileCard {
+	border: var(--primary-border);
+	padding: 0.5em 1em 2.5em 0.9em;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.editProfile {
+	border: 0.1px solid black;
+	font-size: 12px;
+	padding: 0.4em 1.3em;
+	border-radius: 0.3em;
+	background-image: linear-gradient(to top, #cccccc, #fff);
+}
+
+.AdressCard {
+	border: var(--primary-border);
+	position: relative;
+	width: 300px;
+	height: 200px;
+	margin: 0.3em;
+	border-radius: 0.5em;
+	box-shadow: 0px 2px 4px rgba(226, 226, 226, 0.979);
+}
+.Address_header {
+	border-bottom: 0.3px solid rgb(32, 32, 32);
+	padding: 1em;
+}
+.Address_body {
+	display: flex;
+	padding: 1em;
+	flex-direction: column;
+	max-height: 300px;
+	height: 100%;
+	margin-bottom: 1em;
+}
+.Address_fotter {
+	display: flex;
+	position: absolute;
+	bottom: 0;
+	padding: 1em;
+	align-items: flex-start;
+}

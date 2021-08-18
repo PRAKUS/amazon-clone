@@ -1,0 +1,36 @@
+{"product":[
+    {
+        "id":1,
+        "categories":"electronics",
+        "name":"Google Pixel 4a (Just Black, 6GB RAM, 128GB Storage)",
+        "brand":"Google",
+        "rating":4,
+        "noofrating":120,
+        "qaNo":120,
+        "mrp":"39999.00",
+        "price":"35650.00",
+        "seller":"Appario Retial Private Ltd",
+        "stock":true,
+        "details":{
+            "OS":"Andriod",
+            "Color":"Black",
+            "Wireless Carrier":"Unlocked",
+            "Form Factor":"Smart Phone"
+        },
+        "description":[
+            "Capture great photos using your cell phone on the 12 MP dual pixel rear camera with features like Live HDR+, Night Sight, and Portrait Mode",
+            "The Adaptive Battery lasts up to 24 hours as it learns your favorite apps and reduces power to the ones you rarely use",
+            "HDR+ makes your photos look better by automatically adjusting for color and lighting","Night Sight lets you capture rich detail and color even in the dark",
+            "Get things done with just your voice: Send texts, get directions and reminders, and multitask on the go on your mobile phone"
+        ],
+        "ammenities":{
+            "replacement":true,
+            "amazon delivered":true,
+            "warranty":true,
+            "nocontactdelivery":true
+        }
+
+
+    }
+]
+}

@@ -1,0 +1,62 @@
+.qa_container {
+	width: 60%;
+}
+.question {
+	width: 100%;
+	border-radius: 0.2em;
+	border: 1px solid black !important;
+	padding: 0.1em 0em;
+	box-shadow: inset 0px 2px 3px rgb(163, 163, 163);
+}
+.question_input {
+	width: 100%;
+	border: none;
+	background-color: transparent;
+}
+
+.question_input:focus {
+	filter: drop-shadow(2px 3px 3px lightskyblue);
+	background-color: lightskyblue;
+}
+.vote-icon {
+	font-size: 3em;
+	padding: 0em;
+}
+.question_list {
+	list-style: none;
+	padding: 0;
+}
+.questions {
+	padding: 0.5em 0em;
+}
+
+.qna_container {
+	display: grid;
+	grid-template-areas: "qbullet question" " ansbullet answer";
+	/* grid-template-columns: 19% 80%; */
+	grid-row-gap: 0.4em;
+}
+
+.q {
+	grid-area: qbullet;
+	font-size: 14px;
+	font-weight: 500;
+}
+.qcontent {
+	grid-area: question;
+	font-size: 14px;
+	font-weight: 450;
+	padding-left: 0.5em;
+}
+.a {
+	font-size: 14px;
+	font-weight: 500;
+
+	grid-area: ansbullet;
+}
+.acontent {
+	grid-area: answer;
+	padding-left: 0.5em;
+	font-weight: 450;
+	font-size: 14px;
+}

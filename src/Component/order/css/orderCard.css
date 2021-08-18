@@ -1,0 +1,35 @@
+.orderCard_container {
+	width: 100%;
+	border-radius: 0.2em;
+	border: var(--primary-border);
+}
+.orderCard_header {
+	background-color: #f6f6f6;
+	width: 100%;
+	border-bottom: var(--primary-border);
+}
+.orderCard_body {
+	padding: 1em;
+}
+.order_img {
+	height: 4em;
+	width: 4em;
+}
+.order-btn {
+	border: 1px solid black;
+	padding: 0.5em;
+	border-radius: 0.3em;
+	font-size: 12px;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+}
+.review-btn {
+	background-image: linear-gradient(to top, #cccccc, #fff);
+	padding: 1em 1.9em;
+	border: var(--primary-border);
+}
+.reorder {
+	width: 150px;
+	border: var(--primary-border);
+}

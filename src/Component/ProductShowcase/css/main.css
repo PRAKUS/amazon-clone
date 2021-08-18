@@ -1,0 +1,59 @@
+body {
+	background-color: white;
+}
+.main-page {
+	display: grid;
+
+	grid-template-areas: " mproduct mproductdes mpayment";
+	grid-template-columns: 34% 49% 16%;
+	grid-column-gap: 1%;
+	border-bottom: var(--primary-border);
+	padding-bottom: 1em;
+}
+.main_data {
+	border-bottom: var(--primary-border);
+}
+
+.mproduct {
+	grid-area: mproduct;
+
+	padding: 0 1em;
+}
+.mproductdes {
+	grid-area: mproductdes;
+}
+.mpayment {
+	grid-area: mpayment;
+}
+.catlogImg-container {
+	width: 100px;
+	height: 200px;
+	margin: 2em auto;
+}
+.catlog-img {
+}
+.catlog-card {
+	display: flex;
+	flex-direction: column;
+	padding: 0.3em;
+	flex: 0 0 30%;
+	margin: 0 0.3em;
+	border-bottom: var(--primary-border);
+}
+.catlog_container {
+	display: grid;
+	grid-template-areas: "filter main";
+	grid-template-columns: 19% 80%;
+	grid-column-gap: 1%;
+}
+
+.pfilter {
+	grid-area: filter;
+}
+.pmain {
+	grid-area: main;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}

@@ -1,0 +1,39 @@
+/* body {
+	background-color: #eaeded;
+} */
+.cart_conainer {
+	display: grid;
+	width: 100%;
+	grid-template-areas: "container ads";
+	grid-template-columns: 79% 19%;
+	grid-column-gap: 1%;
+}
+
+.cart_main {
+	grid-area: container;
+	background-color: white;
+	padding: 1em;
+}
+.cart_header {
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	border-bottom: var(--primary-border);
+}
+
+.cart_ads {
+	grid-area: ads;
+}
+
+.CartCard_container {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	border-bottom: var(--primary-border);
+	padding: 0.2em 0em 1.2em 0em;
+}
+
+.CardCart_img {
+	height: 7em;
+	width: 7em;
+}

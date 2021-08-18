@@ -1,0 +1,32 @@
+.pro-container {
+	display: flex;
+	flex-direction: row;
+	position: sticky;
+	top: 50px;
+}
+.pro-smimg {
+	display: flex;
+	flex-direction: column;
+	flex: 0 0 10%;
+}
+.pro-smimg-list {
+	list-style: none;
+	padding: 0;
+}
+.pro-smimg-list > li {
+	height: 3em;
+	width: 2.3em;
+	box-sizing: border-box;
+	border: 2px solid orange;
+	border-radius: 2px;
+	margin: 0.5em 0;
+	overflow: hidden;
+}
+
+.pro-lgimg {
+	margin-top: 1.5em;
+	background-color: turquoise;
+	width: 100%;
+	flex: 0 0 90%;
+	overflow: hidden;
+}

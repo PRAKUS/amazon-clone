@@ -1,0 +1,45 @@
+.menu-container {
+	height: 50px;
+	margin-top: 0;
+	display: flex;
+	align-items: center;
+}
+.menu {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	box-sizing: border-box;
+	padding: 0;
+}
+.menu-categories {
+	padding: 0em 2em;
+	font-size: large;
+}
+.menu1 {
+	background-color: #232f3e;
+	color: white;
+}
+.menu1-list > li {
+	box-sizing: border-box;
+	cursor: pointer;
+	border: 1px solid transparent;
+	margin: 0 0.4em;
+	padding: 0.3em;
+}
+.menu1-list > li:hover {
+	border: 1px solid white;
+	border-radius: 0.3em;
+}
+
+.menu2 {
+	background-color: white;
+	border-bottom: 0.3px solid rgb(204, 204, 204);
+}
+
+.menu2-list {
+	font-size: 12px;
+	box-sizing: border-box;
+	cursor: pointer;
+	flex: 0 0 85%;
+}

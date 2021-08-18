@@ -1,0 +1,30 @@
+body {
+	background-color: white;
+}
+.template-container {
+	display: grid;
+	width: 100%;
+	grid-template-areas: " left center right";
+	grid-column-gap: 1%;
+	border-bottom: var(--primary-border);
+	padding-bottom: 1em;
+}
+.main_data {
+	border-bottom: var(--primary-border);
+}
+.sm-template {
+	grid-template-columns: 34% 48% 16%;
+}
+.lg-template {
+	grid-template-columns: 14% auto 14%;
+}
+.left {
+	grid-area: left;
+	padding: 0 1em;
+}
+.main {
+	grid-area: center;
+}
+.right {
+	grid-area: right;
+}
