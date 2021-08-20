@@ -32,8 +32,12 @@
 	border-bottom: var(--primary-border);
 	padding: 0.2em 0em 1.2em 0em;
 }
+.CardCart_img_container {
+	height: 7em;
+	width: 7em;
+	/* width: 100%; */
+}
 
 .CardCart_img {
 	height: 7em;
-	width: 7em;
 }

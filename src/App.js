@@ -11,41 +11,46 @@ import Address from "./Component/profile/Address";
 import Main from "./Component/ProductShowcase/ProductMain";
 import ProductCatlog from "./Component/ProductShowcase/ProductCatlog";
 import ProductState from "./Context/ProductContext/ProductState";
+import CartState from "./Context/CartContext/CartState";
 
 function App() {
 	return (
 		<div>
-			<Router>
-				<Header />
-				<Menu />
+			<CartState>
+				<Router>
+					<Header />
+					<Menu />
 
-				<Switch>
-					<Route path='/' exact>
-						<Home />
-					</Route>
-					<Route path='/home' component={Home} />
-					<Route path='/product' exact>
-						<ProductCatlog />
-					</Route>
-					<Route path='/item' exact>
-						<ProductState>
-							<Main />
-						</ProductState>
-					</Route>
+					<Switch>
+						<Route path='/' exact>
+							<Home />
+						</Route>
+						<Route path='/home' component={Home} />
+						<Route path='/product' exact>
+							<ProductCatlog />
+						</Route>
+						<Route path='/item' exact>
+							<ProductState>
+								<Main />
+							</ProductState>
+						</Route>
 
-					<Route path='/cart' component={Cart} />
-					<Route path='/login' component={LoginDash} />
-					<Route path='/order' component={Order} />
-					<Route path='/profile' component={Profile} />
-					<Route path='/address' component={Address} />
-					<Route path='/cart' component={Cart} />
-					<Route path='*'>
-						<div className='d-flex item-center'>
-							<h3>No page found</h3>
-						</div>
-					</Route>
-				</Switch>
-			</Router>
+						<Route path='/cart'>
+							<Cart />
+						</Route>
+						<Route path='/login' component={LoginDash} />
+						<Route path='/order' component={Order} />
+						<Route path='/profile' component={Profile} />
+						<Route path='/address' component={Address} />
+						<Route path='/cart' component={Cart} />
+						<Route path='*'>
+							<div className='d-flex item-center'>
+								<h3>No page found</h3>
+							</div>
+						</Route>
+					</Switch>
+				</Router>
+			</CartState>
 		</div>
 	);
 }

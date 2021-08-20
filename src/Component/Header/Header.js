@@ -1,15 +1,23 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import SearchIcon from "@material-ui/icons/Search";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 import AddShoppingCartOutlinedIcon from "@material-ui/icons/AddShoppingCartOutlined";
 import "./Header.css";
 
+import cartContext from "../../Context/CartContext/cart-context";
+
 // const Dropdown = (props) => {
 // 	<div>{props.children}</div>;
 // };
 
 const Header = () => {
+	const { ItemCount } = useContext(cartContext);
+	const [Item, setItem] = useState(0);
+	useEffect(() => {
+		setItem(ItemCount);
+	}, [ItemCount]);
+
 	return (
 		<div className='header'>
 			<Link to='/'>
@@ -62,7 +70,18 @@ const Header = () => {
 						<span>
 							<AddShoppingCartOutlinedIcon className='cart_icon' />
 						</span>
-						<span className='cart-opt'>Cart</span>
+						<div className='d-flex flex-column'>
+							<small
+								className='m-0'
+								style={{
+									lineHeight: "0.2",
+									textAlign: "center",
+									color: "orange",
+								}}>
+								{Item}
+							</small>
+							<span className='cart-opt m-0'>Cart</span>
+						</div>
 					</div>
 				</Link>
 			</div>

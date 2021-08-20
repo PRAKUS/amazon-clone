@@ -17,7 +17,7 @@ function ProductMain() {
 	useEffect(() => {
 		fetchData();
 		window.scrollTo(0, 0);
-	}, []); //link dependencency is for page refresh.
+	}, [link]); //link dependencency is for page refresh.
 	async function fetchData() {
 		const res = await axios.get(link);
 		console.log("res", res);
@@ -44,7 +44,7 @@ function ProductMain() {
 						<ProductDescription data={product.product[0]} />
 					</Template.Center>
 					<Template.Right>
-						<AddCart />
+						<AddCart data={product.product[0]} />
 					</Template.Right>
 				</Template>
 				<div>

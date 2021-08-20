@@ -165,3 +165,9 @@ button {
 .mt-2 {
 	margin-top: 1em !important;
 }
+.cursor {
+	cursor: pointer;
+}
+.cursor:hover {
+	color: orange;
+}

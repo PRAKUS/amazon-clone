@@ -1,38 +1,59 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
-function CartCard(props) {
+const initialState = { id: "", name: "", img: "", price: "" };
+const CartCard = ({ data, deleteItem }) => {
 	const [value, setValue] = useState(1);
+	const [product, setProduct] = useState(initialState);
+
+	useEffect(() => {
+		setProduct(data);
+		if (value === "0") {
+			deleteItem();
+		}
+	}, [value]);
+
 	const valueHandler = (event) => {
 		event.persist();
 		setValue(event.target.value);
 	};
+
 	return (
 		<div className='CartCard_container'>
-			<span className='d-flex flex-row item-center'>
-				<input type='checkbox' />
-				<img className='CardCart_img' src={props.img} alt='' />
+			<span className='d-flex flex-row CardCart_img_container'>
+				<img className='CardCart_img' src={product.img} alt={product.name} />
 			</span>
 			<div className='d-flex flex-column ml-2'>
-				<h3 className='m-0'>{props.productName}</h3>
+				<h3 className=''>
+					<Link
+						to={{
+							pathname: `item`,
+							search: `?id=${product.id}`,
+							state: { link: "http://localhost:3002/product" },
+						}}>
+						{product.name}
+					</Link>
+				</h3>
 				<small></small>
 				<div className='d-flex'>
 					<select value={value} onChange={valueHandler}>
-						<option vlaue={0}>0 (Delete)</option>
-						<option vlaue={1}>1</option>
-						<option vlaue={2}>2</option>
-						<option vlaue={3}>3</option>
-						<option vlaue={4}>4</option>
-						<option vlaue={5}>5</option>
-						<option vlaue={6}>6</option>
-						<option vlaue={7}>7</option>
-						<option vlaue={8}>8</option>
-						<option vlaue={9}>9</option>
-						<option vlaue={10}>10+</option>
+						<option value={0}>0 (Delete)</option>
+						<option value={1}>1</option>
+						<option value={2}>2</option>
+						<option value={3}>3</option>
+						<option value={4}>4</option>
+						<option value={5}>5</option>
+						<option value={6}>6</option>
+						<option value={7}>7</option>
+						<option value={8}>8</option>
+						<option value={9}>9</option>
+						<option value={10}>10+</option>
 					</select>
 					<p
-						className='m-0 ml-2 font-sm pl-3'
-						style={{ borderLeft: "0.5px solid rgba(226, 226, 226, 0.979)" }}>
+						className='m-0 ml-2 font-sm pl-3 cursor'
+						style={{ borderLeft: "0.5px solid rgba(226, 226, 226, 0.979)" }}
+						onClick={deleteItem}>
 						Delete
 					</p>
 					<p
@@ -47,9 +68,9 @@ function CartCard(props) {
 					</p>
 				</div>
 			</div>
-			<span className='ml-auto my-0  font-md'>{props.price}</span>
+			<span className='ml-auto my-0  font-md'>{product.price}</span>
 		</div>
 	);
-}
+};
 
 export default CartCard;
